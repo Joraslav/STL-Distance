@@ -133,3 +133,7 @@ STL-Distance/
 ├── CMakeLists.txt     # Конфигурация CMake
 └── README.md 
 ```
+
+## Лицензия
+
+Этот проект распространяется под лицензией BSD-3-Clause. Подробности см. в файле [LICENSE](./LICENSE).
