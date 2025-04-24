@@ -61,7 +61,7 @@
 
 ### Зависимости
 
-- **stl_reader**: Библиотека для работы с STL-файлами.
+- **stl_reader**: Библиотека для работы с STL-файлами. Распространяется под лицензией BSD-3-Clause. Подробности см. в файле [LICENSE](./lib/stl_reader/LICENSE).
 - **Google Test**: Для написания и выполнения модульных тестов.
 
 ---
@@ -72,7 +72,7 @@
 2. Склонируйте репозиторий:
 
    ```bash
-   git clone <URL репозитория>
+   git clone https://github.com/Joraslav/STL-Distance.git
    cd STL-Distance
    ```
 
