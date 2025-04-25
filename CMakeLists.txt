@@ -5,6 +5,11 @@ project(STL-Distance
     DESCRIPTION "A project for STL distance calculations"
 )
 
+# Настройка политик CMake
+if(POLICY CMP0077)
+    cmake_policy(SET CMP0077 NEW) # Для правильной обработки опций
+endif()
+
 # Настройка версии и стандартов
 message(STATUS "Version of project: ${PROJECT_VERSION}")
 
@@ -12,14 +17,22 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) # Для кросс-платформенной совместимости
 
-# Настройка предупреждений
-add_compile_options(
-    -Wall
-    -Wextra
-    -Werror
-    -Wpedantic
-    -Wconversion
-)
+# Настройка предупреждений (платформонезависимая версия)
+if(MSVC)
+    add_compile_options(
+        /W4
+        /WX
+        /wd4201
+        /wd4251
+        /wd4275)
+else()
+    add_compile_options(
+        -Wall
+        -Wextra
+        -Werror
+        -Wpedantic
+        -Wconversion)
+endif()
 
 # Включение современных практик CMake
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # Для инструментов анализа кода
