@@ -18,8 +18,8 @@ using namespace std::chrono;
 
 int main()
 {
-    std::string body_1 = "../data/Body.stl"s;
-    std::string body_2 = "../data/Gun.stl"s;
+    std::string body_1 = "../data/fan1.stl"s;
+    std::string body_2 = "../data/fan2.stl"s;
 
     // std::string fout = "OutPut.txt"s;
 
